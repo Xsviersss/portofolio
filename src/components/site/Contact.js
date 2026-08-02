@@ -4,7 +4,7 @@ import { PrimaryButton, GhostButton } from "@/components/ui/Button";
 export function Contact({ profile }) {
   const socials = [
   profile.github && { icon: Github, href: profile.github, label: "GitHub" },
-  profile.linkedin && { icon: Youtube, href: profile.linkedin, label: "YouTube" },
+  profile.youtube && { icon: Youtube, href: profile.youtube, label: "YouTube" },
 ].filter(Boolean);
 
   return (
@@ -17,7 +17,7 @@ export function Contact({ profile }) {
       <div className="relative mx-auto max-w-5xl text-center">
         <span className="font-mono text-xs text-blue-2">GET IN TOUCH</span>
         <h2 className="mb-[26px] mt-2.5 font-display text-[clamp(1.8rem,4vw,2.6rem)] font-bold text-text">
-          Let&apos;s build something worth shipping.
+          Need something spesific? Contact me.
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a href={`mailto:${profile.email}`}>
