@@ -17,7 +17,7 @@ export function Nav() {
     <header className="sticky top-0 z-40 border-b border-line bg-void/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
         <a href="#top" className="font-display text-[17px] font-bold tracking-tight text-text">
-          A<span className="text-blue">.</span>R
+          X<span className="text-blue">.</span>M
         </a>
         <nav className="hidden items-center gap-8 sm:flex">
           {LINKS.map(([label, href]) => (
