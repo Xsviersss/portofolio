@@ -1,12 +1,11 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Youtube, Mail } from "lucide-react";
 import { PrimaryButton, GhostButton } from "@/components/ui/Button";
 
 export function Contact({ profile }) {
   const socials = [
-    profile.github && { icon: Github, href: profile.github, label: "GitHub" },
-    profile.linkedin && { icon: Linkedin, href: profile.linkedin, label: "LinkedIn" },
-    profile.twitter && { icon: Twitter, href: profile.twitter, label: "Twitter" },
-  ].filter(Boolean);
+  profile.github && { icon: Github, href: profile.github, label: "GitHub" },
+  profile.linkedin && { icon: Youtube, href: profile.linkedin, label: "YouTube" },
+].filter(Boolean);
 
   return (
     <section id="contact" className="relative overflow-hidden border-t border-line px-6 py-24">
