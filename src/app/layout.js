@@ -26,13 +26,21 @@ export const metadata = {
   openGraph: {
     title: "Xavier Moreau — Fullstack Developer",
     description: "Portfolio of Xsvierss.",
+    url: "https://xsvrs.duckdns.org",
     images: [
       {
-        url: "/portfoliothumb.png",
+        url: "https://xsvrs.duckdns.org/portfoliothumb.png",
         width: 1200,
         height: 630,
+        alt: "Xavier Moreau Portfolio",
       },
     ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://xsvrs.duckdns.org/portfoliothumb.png"],
   },
 };
 
