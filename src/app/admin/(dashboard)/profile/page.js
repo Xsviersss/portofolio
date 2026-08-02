@@ -91,11 +91,8 @@ export default function AdminProfilePage() {
           <Field label="GitHub URL">
             <TextInput value={profile.github} onChange={set("github")} />
           </Field>
-          <Field label="LinkedIn URL">
-            <TextInput value={profile.linkedin} onChange={set("linkedin")} />
-          </Field>
-          <Field label="Twitter URL">
-            <TextInput value={profile.twitter} onChange={set("twitter")} />
+          <Field label="YouTube URL">
+            <TextInput value={profile.youtube} onChange={set("youtube")} />
           </Field>
         </div>
 
