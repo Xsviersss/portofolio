@@ -15,6 +15,9 @@ export const DEFAULT_PROFILE = {
   youtube: "https://youtube.com",
   location: "Lisbon, Portugal",
   skills: ["TypeScript", "React", "Node.js", "PostgreSQL", "Figma", "Go", "AWS", "GraphQL"],
+  otherHalfName: "Armin Arlert",
+  otherHalfImage: "/arminarlert.png",
+  otherHalfDescription: "Armin Arlert is my other half in fiction. I see myself in his self-doubt, his struggles with feeling inadequate, and his journey of proving that he has a place in this world. He was never the strongest or the most fearless, but he always found strength through his curiosity, intelligence, and determination. His story represents growth, the process of turning weaknesses into strengths, and the courage to keep moving forward despite fear and uncertainty.",
 };
 
 export const DEFAULT_PROJECTS = [
