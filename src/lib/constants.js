@@ -12,8 +12,7 @@ export const DEFAULT_PROFILE = {
     "I'm a product engineer who moves between design and code. Over the last six years I've shipped interfaces for startups and platform teams, with a focus on speed, clarity, and details most people skip. I care about the fifty milliseconds between a click and a response.",
   email: "hello@alexrivera.dev",
   github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
+  youtube: "https://youtube.com",
   location: "Lisbon, Portugal",
   skills: ["TypeScript", "React", "Node.js", "PostgreSQL", "Figma", "Go", "AWS", "GraphQL"],
 };
