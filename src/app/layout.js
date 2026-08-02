@@ -29,7 +29,7 @@ export const metadata = {
     url: "https://xsvrs.duckdns.org",
     images: [
       {
-        url: "https://xsvrs.duckdns.org/portfoliothumb.png",
+        url: "https://xsvrs.duckdns.org/portfoliothumb2.png",
         width: 1200,
         height: 630,
         alt: "Xavier Moreau Portfolio",
@@ -40,7 +40,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    images: ["https://xsvrs.duckdns.org/portfoliothumb.png"],
+    images: ["https://xsvrs.duckdns.org/portfoliothumb2.png"],
   },
 };
 
