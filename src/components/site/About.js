@@ -1,6 +1,9 @@
 import { Tag } from "@/components/ui/Field";
 
 export function About({ profile }) {
+  const { otherHalfName, otherHalfImage, otherHalfDescription } = profile;
+  const showOtherHalf = otherHalfName && otherHalfImage && otherHalfDescription;
+
   return (
     <section id="about" className="border-t border-line px-6 py-20">
       <div className="mx-auto grid max-w-5xl gap-12 sm:grid-cols-5">
