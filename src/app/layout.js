@@ -22,6 +22,18 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "Xavier Moreau — Fullstack Developer",
   description: "Portfolio of Xsvierss.",
+
+  openGraph: {
+    title: "Xavier Moreau — Fullstack Developer",
+    description: "Portfolio of Xsvierss.",
+    images: [
+      {
+        url: "/portfoliothumb.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
