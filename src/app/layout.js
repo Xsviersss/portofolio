@@ -20,8 +20,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Alex Rivera — Product Engineer",
-  description: "Portfolio of Alex Rivera, product engineer.",
+  title: "Xavier Moreau — Fullstack Developer",
+  description: "Portfolio of Xsvierss.",
 };
 
 export default function RootLayout({ children }) {
