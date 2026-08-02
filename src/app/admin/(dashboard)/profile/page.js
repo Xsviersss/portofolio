@@ -87,7 +87,7 @@ export default function AdminProfilePage() {
           <TextInput value={profile.skills} onChange={set("skills")} />
         </Field>
 
-        <div className="grid gap-x-4 sm:grid-cols-3">
+        <div className="grid gap-x-4 sm:grid-cols-2">
           <Field label="GitHub URL">
             <TextInput value={profile.github} onChange={set("github")} />
           </Field>
