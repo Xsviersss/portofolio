@@ -74,8 +74,7 @@ export default function AdminLoginPage() {
         </form>
 
         <p className="mt-[18px] font-mono text-[11px] leading-relaxed text-muted">
-          First time here? The default password is {DEFAULT_PASSWORD} — change it under Settings once
-          you&apos;re in.
+          Authorized Access only.
         </p>
       </div>
     </div>
