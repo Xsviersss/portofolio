@@ -96,9 +96,50 @@ export default function AdminProfilePage() {
           </Field>
         </div>
 
-        <PrimaryButton type="submit" icon={Check} disabled={saving}>
-          {saving ? "Saving…" : "Save profile"}
-        </PrimaryButton>
+<div className="mt-2 rounded-[10px] border border-line bg-surface p-4">
+          <h3 className="mb-1 font-display text-[15px] font-semibold text-text">My Other Half</h3>
+          <p className="mb-4 font-body text-[12.5px] text-muted">
+            A personal section for a fictional character that resonates with you. Leave any field empty
+            to hide this section from the site. Use a transparent-background PNG for the image.
+          </p>
+
+          <Field label="Character name">
+            <TextInput
+              value={profile.otherHalfName || ""}
+              onChange={set("otherHalfName")}
+              placeholder="e.g. Armin Arlert"
+            />
+          </Field>
+
+          <Field label="Image URL (transparent PNG)">
+            <TextInput
+              value={profile.otherHalfImage || ""}
+              onChange={set("otherHalfImage")}
+              placeholder="https://..."
+            />
+          </Field>
+
+          {profile.otherHalfImage && (
+            <div className="mb-4 flex justify-center rounded-lg border border-line bg-void p-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={profile.otherHalfImage} alt="Preview" className="max-h-40 w-auto" />
+            </div>
+          )}
+
+          <Field label="Description">
+            <TextArea
+              value={profile.otherHalfDescription || ""}
+              onChange={set("otherHalfDescription")}
+              placeholder="Why this character resonates with you..."
+            />
+          </Field>
+        </div>
+
+        <div className="mt-5">
+          <PrimaryButton type="submit" icon={Check} disabled={saving}>
+            {saving ? "Saving…" : "Save profile"}
+          </PrimaryButton>
+        </div>
       </form>
     </div>
   );
