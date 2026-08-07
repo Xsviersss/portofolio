@@ -30,6 +30,9 @@ export const DEFAULT_PROJECTS = [
     githubUrl: "",
     featured: true,
     year: "2025",
+    status: "released",
+    image: "",
+    video: "",
     createdAt: "2025-01-01T00:00:00.000Z",
   },
   {
@@ -41,6 +44,9 @@ export const DEFAULT_PROJECTS = [
     githubUrl: "",
     featured: true,
     year: "2024",
+    status: "ongoing",
+    image: "",
+    video: "",
     createdAt: "2024-06-01T00:00:00.000Z",
   },
   {
@@ -52,6 +58,15 @@ export const DEFAULT_PROJECTS = [
     githubUrl: "",
     featured: false,
     year: "2023",
+    status: "todo",
+    image: "",
+    video: "",
     createdAt: "2023-03-01T00:00:00.000Z",
   },
 ];
+
+export const PROJECT_STATUSES = {
+  released: { label: "Released", color: "#4ade80" },
+  ongoing: { label: "Ongoing", color: "#6ea8ff" },
+  todo: { label: "To Do", color: "#8891a3" },
+};
