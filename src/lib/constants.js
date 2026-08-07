@@ -3,6 +3,19 @@
 
 export const DEFAULT_PASSWORD = "admin2026";
 
+export const DEFAULT_THEME = {
+  void: "#0a0c10",
+  surface: "#10141b",
+  surface2: "#161b24",
+  line: "#212836",
+  text: "#e8ecf3",
+  muted: "#8891a3",
+  blue: "#3b6cff",
+  blue2: "#6ea8ff",
+  blueDim: "#1c3fae",
+  danger: "#ff6b6b",
+};
+
 export const DEFAULT_PROFILE = {
   name: "Alex Rivera",
   role: "Product Engineer",
