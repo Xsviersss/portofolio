@@ -34,6 +34,9 @@ export async function POST(request) {
     githubUrl: body.githubUrl || "",
     featured: !!body.featured,
     year: body.year || String(new Date().getFullYear()),
+    status: body.status || "released",
+    image: body.image || "",
+    video: body.video || "",
     createdAt: new Date().toISOString(),
   };
 
