@@ -47,7 +47,7 @@ async function setup() {
       password_hash TEXT NOT NULL
     )
   `;
-  await sql`
+await sql`
     CREATE TABLE IF NOT EXISTS projects (
       id TEXT PRIMARY KEY,
       title TEXT NOT NULL,
@@ -57,9 +57,15 @@ async function setup() {
       github_url TEXT NOT NULL DEFAULT '',
       featured BOOLEAN NOT NULL DEFAULT false,
       year TEXT NOT NULL DEFAULT '',
+      status TEXT NOT NULL DEFAULT 'released',
+      image TEXT NOT NULL DEFAULT '',
+      video TEXT NOT NULL DEFAULT '',
       created_at TIMESTAMPTZ NOT NULL DEFAULT now()
     )
   `;
+  await sql`ALTER TABLE projects ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'released'`;
+  await sql`ALTER TABLE projects ADD COLUMN IF NOT EXISTS image TEXT NOT NULL DEFAULT ''`;
+  await sql`ALTER TABLE projects ADD COLUMN IF NOT EXISTS video TEXT NOT NULL DEFAULT ''`;
 
   const [{ count: profileCount }] = await sql`SELECT COUNT(*)::int AS count FROM profile`;
   if (Number(profileCount) === 0) {
