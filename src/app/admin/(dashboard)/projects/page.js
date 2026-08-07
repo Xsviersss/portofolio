@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Check, Pencil, Plus, Star, Trash2 } from "lucide-react";
 import { PrimaryButton } from "@/components/ui/Button";
 import { ProjectForm } from "@/components/admin/ProjectForm";
+import { StatusBadge } from "@/components/site/ProjectCard";
 
 export default function AdminProjectsPage() {
   const [projects, setProjects] = useState([]);
