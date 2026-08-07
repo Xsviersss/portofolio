@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import { Field, TextInput, TextArea } from "@/components/ui/Field";
 import { PrimaryButton, GhostButton } from "@/components/ui/Button";
+import { PROJECT_STATUSES } from "@/lib/constants";
 
 const EMPTY = {
   title: "",
@@ -13,12 +14,15 @@ const EMPTY = {
   githubUrl: "",
   featured: false,
   year: String(new Date().getFullYear()),
+  status: "released",
+  image: "",
+  video: "",
 };
 
 export function ProjectForm({ initial, onSaved, onCancel }) {
   const isEdit = !!initial;
   const [form, setForm] = useState(
-    initial ? { ...initial, tags: (initial.tags || []).join(", ") } : EMPTY
+    initial ? { ...EMPTY, ...initial, tags: (initial.tags || []).join(", ") } : EMPTY
   );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
@@ -78,6 +82,20 @@ export function ProjectForm({ initial, onSaved, onCancel }) {
           <TextInput value={form.tags} onChange={set("tags")} placeholder="React, Node.js, PostgreSQL" />
         </Field>
 
+        <Field label="Status">
+          <select
+            value={form.status}
+            onChange={set("status")}
+            className="w-full rounded-[7px] border border-line bg-surface-2 px-3 py-[9px] font-body text-sm text-text outline-none transition-colors focus:border-blue"
+          >
+            {Object.entries(PROJECT_STATUSES).map(([key, s]) => (
+              <option key={key} value={key}>
+                {s.label}
+              </option>
+            ))}
+          </select>
+        </Field>
+
         <div className="grid gap-x-4 sm:grid-cols-2">
           <Field label="Live URL">
             <TextInput value={form.liveUrl} onChange={set("liveUrl")} placeholder="https://..." />
@@ -87,7 +105,21 @@ export function ProjectForm({ initial, onSaved, onCancel }) {
           </Field>
         </div>
 
-        <label className="mb-5 flex cursor-pointer select-none items-center gap-2">
+        <div className="mt-2 rounded-[10px] border border-line bg-void p-4">
+          <h4 className="mb-1 font-display text-[14px] font-semibold text-text">Media (shown on project page)</h4>
+          <p className="mb-4 font-body text-[12.5px] text-muted">
+            Optional. Add a video (YouTube link or direct .mp4 URL) or an image — video takes priority if
+            both are set. Shown at the top of this project&apos;s dedicated page.
+          </p>
+          <Field label="Video URL (YouTube or .mp4)">
+            <TextInput value={form.video} onChange={set("video")} placeholder="https://youtube.com/watch?v=..." />
+          </Field>
+          <Field label="Image URL" className="mb-0">
+            <TextInput value={form.image} onChange={set("image")} placeholder="https://... or /your-image.png" />
+          </Field>
+        </div>
+
+        <label className="mb-5 mt-5 flex cursor-pointer select-none items-center gap-2">
           <input
             type="checkbox"
             checked={!!form.featured}
