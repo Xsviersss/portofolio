@@ -80,6 +80,7 @@ export default function AdminProjectsPage() {
                 <div className="flex items-center gap-2">
                   <span className="font-display text-[14.5px] font-semibold text-text">{p.title}</span>
                   {p.featured && <Star size={12} className="text-blue-2" fill="currentColor" />}
+                  {p.status && <StatusBadge status={p.status} />}
                 </div>
                 <p className="mt-0.5 truncate font-body text-[12.5px] text-muted">{p.description}</p>
               </div>
