@@ -33,6 +33,9 @@ export async function PUT(request, { params }) {
     githubUrl: body.githubUrl || "",
     featured: !!body.featured,
     year: body.year || existing.year,
+    status: body.status || existing.status || "released",
+    image: body.image || "",
+    video: body.video || "",
   });
 
   return NextResponse.json(updated);
